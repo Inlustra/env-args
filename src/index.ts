@@ -100,7 +100,7 @@ export function load<T extends object>(
     log: console.log,
     envKeyTransform: (key: string) =>
       options.envPrefix
-        ? `${options.envPrefix}${key}`
+        ? constant(`${options.envPrefix}_${key}`)
         : packageName ? `${constant(packageName + '_' + key)}` : constant(key),
     ...configOptions
   }

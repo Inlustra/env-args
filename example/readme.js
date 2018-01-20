@@ -1,4 +1,4 @@
-const envVar = require('../dist/index')
+const envArgs = require('../dist/index')
 
 const defaultConfiguration = {
     foo: 'A default string',
@@ -9,6 +9,6 @@ const defaultConfiguration = {
     overridden: 10
 }
 
-const loadedConfiguration = envVar.load(defaultConfiguration)
+const loadedConfiguration = envArgs.load(defaultConfiguration, {envPrefix: 'ENV_ARGS'})
 
 console.dir(loadedConfiguration)

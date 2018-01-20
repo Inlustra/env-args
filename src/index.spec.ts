@@ -64,7 +64,7 @@ test('should correctly load them from process.env', t => {
 })
 
 test('should correctly load them from process.env with overridden prefix', t => {
-  process.env['foorequired'] = 'true'
+  process.env['FOO_REQUIRED'] = 'true'
   let config
   t.notThrows(
     () =>
@@ -73,12 +73,12 @@ test('should correctly load them from process.env with overridden prefix', t => 
           required: undefined
         },
         {
-          envPrefix: 'foo'
+          envPrefix: 'FOO'
         }
       ))
   )
   t.is(config.required, true)
-  delete process.env['foorequired']
+  delete process.env['FOO_REQUIRED']
 })
 
 test('should correctly load them from .env file', t => {
