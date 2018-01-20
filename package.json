@@ -1,6 +1,6 @@
 {
   "name": "@inlustra/env-args",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple npm package that loads configuration using .env files, environment variables and node arguments",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
