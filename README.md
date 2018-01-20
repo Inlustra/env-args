@@ -20,7 +20,7 @@ Will automatically coerce both args and environment variables to their correct t
 - `--myVar='a full on string'`: would become `{myVar: 'a full on string'}`
 - `--myVar=null`: would become `{myVar: null}`
 - `--myVar=undefined`: would become `{myVar: undefined}`
-- `--myVar='{test: 10}'`: would become `{myVar: test: 10}`
+- `--myVar='{test: 10}'`: would become `{myVar: {test: 10}}`
 
 Uses:
 - [minimist](https://www.npmjs.com/package/minimist) to parse the arguments
