@@ -1,4 +1,4 @@
-# [env-args](https://www.npmjs.com/package/@inlustra/env-args)
+# [@inlustra/env-args](https://www.npmjs.com/package/@inlustra/env-args)
 
 Load configuration through arguments, a .env file and environment variables in that order. Handling naming for you.
 
