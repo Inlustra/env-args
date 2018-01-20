@@ -47,15 +47,20 @@ console.dir(loadedConfiguration)
 
  **Output**
 ```
-
-{
-    overridden: 'wooh!',
-    aNumber: 4000,
-    alsoRequired: 'Fixed',
-    requiredNumber: 92,
-    notRequired: null,
-    foo: 'A default string'
-}
+------------ Start Environment Configuration ------------
+    overridden: wooh!
+    aNumber: 4000
+    alsoRequired: Fixed
+    requiredNumber: 92
+    notRequired: null
+    foo: A default string
+------------ End Environment Configuration --------------
+{ overridden: 'wooh!',
+  aNumber: 4000,
+  alsoRequired: 'Fixed',
+  requiredNumber: 92,
+  notRequired: null,
+  foo: 'A default string' }
 ```
 
 ## Configuration
