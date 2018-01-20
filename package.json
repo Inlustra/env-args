@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "A simple npm package that loads configuration using .env files, environment variables and node arguments",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf ./dist && tsc",
     "test": "npm run build && ava dist/*.spec.js",

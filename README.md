@@ -2,13 +2,13 @@
 
  Load configuration through arguments, a .env file and environment variables in that order. Handling naming for you.
 
- ## Installation
+ ##  Installation
 
  ```BASH
  npm install --save @inlustra/env-args
  ```
 
- ## Description
+ ##  Description
 
  An opinionated mechanism to load configuration from a given default configuration.
  By default, environment variables are prefixed with your package name (in package.json)
