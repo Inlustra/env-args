@@ -1,18 +1,25 @@
 {
   "name": "@inlustra/env-args",
-  "version": "1.0.0",
-  "description":
-    "A simple npm package that loads configuration using .env files, environment variables and node arguments",
+  "version": "1.0.1",
+  "description": "A simple npm package that loads configuration using .env files, environment variables and node arguments",
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf ./dist && tsc",
     "test": "npm run build && ava dist/*.spec.js",
-    "start":
-      "npm run build && node example/readme.js --alsoRequired='Fixed' --aNumber='4000' --overridden=wooh!",
+    "start": "npm run build && node example/readme.js --alsoRequired='Fixed' --aNumber='4000' --overridden=wooh!",
     "prepublish": "npm run test"
   },
-  "files": ["dist", "README.md"],
-  "keywords": ["env", "environment", "arguments", "minimist", "configuration"],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "env",
+    "environment",
+    "arguments",
+    "minimist",
+    "configuration"
+  ],
   "author": "Inlustra",
   "license": "MIT",
   "dependencies": {
