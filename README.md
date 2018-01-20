@@ -63,6 +63,20 @@ console.dir(loadedConfiguration)
   foo: 'A default string' }
 ```
 
+**Example output if arguments not supplied**
+```
+------------ Environment configuration not set ------------
+Remember, you can override these by placing a .env file in your package.
+Argument --alsoRequired or environment variable ENV_ARGS_ALSO_REQUIRED
+Argument --aNumber or environment variable ENV_ARGS_A_NUMBER
+
+/Users/the_nairn/Documents/Projects/envOrArgs/dist/index.js:58
+        throw new EnvironmentNotSetError();
+        ^
+
+Error: Missing environment configuration
+```
+
 ## Configuration
 | Key              |         Type         | Description                                                                                                 | Defaults To                                                                                                                 |   |
 |------------------|:--------------------:|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|:-:|
