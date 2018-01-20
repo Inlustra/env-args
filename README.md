@@ -63,7 +63,7 @@ ENV_ARGS_OVERRIDDEN=This shouldnt appear
 | log              |   `(string) => any`  | Used to override the default logger                                                                         | `console.log`                                                                                                               |   |
 | envKeyTransform  | `(string) => string` | Used to completely customise configuration key to environment variable mapping                              | If package name exists, `PACKAGE_NAME_FIELD`, if it doesn't exist, but envPrefix is set: `envprefixfield` otherwise `FIELD` |   |
 | dotEnvPath       |       `string`       | Passed to dotenv to specify the location of the .env file                                                   | `undefined` (`.env`)                                                                                                        |   |
-| dotEnvEncoding   |  `'utf8' | 'base64'` | Passed to dotenv to specify the encoding of the variables in the dotenvfile                                 | `undefined` (`'utf8'`)                                                                                                      |   |
+| dotEnvEncoding   |  `'utf8', 'base64'` | Passed to dotenv to specify the encoding of the variables in the dotenvfile                                 | `undefined` (`'utf8'`)                                                                                                      |   |
 
 ## Running tests
 ```bash
