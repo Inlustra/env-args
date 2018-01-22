@@ -21,6 +21,8 @@ Will automatically coerce both args and environment variables to their correct t
 - `--myVar=null`: would become `{myVar: null}`
 - `--myVar=undefined`: would become `{myVar: undefined}`
 - `--myVar='{test: 10}'`: would become `{myVar: {test: 10}}`
+- `--myVar=user1 --myVar=user2`: would become `{myVar: ['user1', 'user2']`
+    - As an environment variable: `MY_VAR=["user1", "user2"]`
 
 Uses:
 - [minimist](https://www.npmjs.com/package/minimist) to parse the arguments

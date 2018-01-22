@@ -94,6 +94,20 @@ test('should correctly load them from .env file', t => {
   t.is(config.testVar, true)
 })
 
+test('should correctly load arrays from .env file', t => {
+  let config
+  t.notThrows(
+    () =>
+      (config = load(
+        {
+          allowedUsernames: undefined,
+        }
+      ))
+  )
+  t.deepEqual(config.allowedUsernames, ['inlustra', 'the_nairn'])
+})
+
+
 test('should correctly load them from overridden .env file', t => {
   let config
   t.notThrows(
