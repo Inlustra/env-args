@@ -5,10 +5,12 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "rm -rf ./dist && tsc",
-    "test": "npm run build && ava dist/*.spec.js",
+    "clean": "rm -r ./dist",
+    "build": "npm run clean && tsc",
+    "build:test": "npm run clean && tsc -p tsconfig.test.json",
+    "test": "npm run build:test && ava dist/*.spec.js",
     "start": "npm run build && node example/readme.js --alsoRequired='Fixed' --aNumber='4000' --overridden=wooh!",
-    "prepublish": "npm run test"
+    "prepublish": "npm run test && npm run build"
   },
   "files": [
     "dist",
