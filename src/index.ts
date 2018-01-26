@@ -74,22 +74,24 @@ function logObject(obj: any, log: Logger) {
   log(chalk.bold(`------------ End Environment Configuration --------------`))
 }
 
+function firstValue(...arg: any[]) {
+  return arg.find(x => x !== undefined)
+}
+
 function loadConfig<T>(obj: T, args: Args, envKeyTransform: EnvKeyTransform) {
   const passedArguments = minimist(args)
   return Object.keys(obj).reduce((acc, key) => {
-    const configValue =
-      passedArguments[key] || getEnv(key, envKeyTransform) || obj[key]
+    let argumentValue = passedArguments[key]
+    let environmentValue = getEnv(key, envKeyTransform)
+    let defaultValue = obj[key]
     return {
-      [key]: configValue,
-      ...acc
+      ...acc,
+      [key]: firstValue(argumentValue, environmentValue, defaultValue)
     }
   }, {}) as T
 }
 
-export function load<T extends object>(
-  obj: T,
-  configOptions: Options = {}
-): T {
+export function load<T extends object>(obj: T, configOptions: Options = {}): T {
   let options: Options = {
     dotEnvEncoding: undefined,
     dotEnvPath: undefined,
